@@ -1,66 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Golluméchat
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welcome to Golluméchat! 
+That's kind of simple: this is a Discord Clone... still in development, of course. 
 
-## About Laravel
+In this README, you'll find my different steps and how I am going through this massive projects. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Basics
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Registration
+* Connection
+* Direct Messages:
+    * Emojis,
+    * Reactions,
+    * Files upload/download,
+    * Images display.
+* Groups:
+    * Invite, 
+    * Leave,
+    * Kick.
 
-## Learning Laravel
+### Advanced features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### Global || One to one
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* Friend(s) list:
+    * Add,
+    * Delete, 
+    * Accept, 
+    * Refuse, 
+    * Block.
+* Voice chat (one to one):
+    * Sound stream,
+    * Pick a sound device, 
+    * Adjust the others' sound,
+    * Self mute, 
+    * Mute someone (self),
+    * Push-to-talk.
+* Video chat (one to one): 
+    * Video stream (sending/receiving),
+    * Cam on/off, on demand,
+    * Turn someone else's cam (self),
+    * Auto adjust the video stream quality according to the connection (sending/receiving).
+* Status:
+    * Online, 
+    * AFK,
+    * Do Not Disturb, 
+    * Invisible/stealth mode.
+* Profile section:
+    * Avatar/profile pic,
+    * Banner, 
+    * Custom status, 
+    * About, 
+    * Username/nickname.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Channels 
 
-## Laravel Sponsors
+**TBD!**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Technologies
 
-### Premium Partners
+Being a Backend Developer, I will mostly focus myself on that side of the project (no worries, it won't be all black and white with a mainstream font 😉). 
+To do so, I will be using... 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+🥁 *drum roll* 🥁
 
-## Contributing
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="laravel logo" width=50 height=50> <img src="https://avatars.githubusercontent.com/u/67109815?s=280&v=4" alt="laravel logo" width=50 height=50>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Why? 
 
-## Code of Conduct
+Because I can. 
+And because I fell in love with these frameworks! I also want to become an expert in that field, so... here is that. 
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## And after? 
 
-## Security Vulnerabilities
+I have started to think about migrating the whole GUI within Electron (yes, like the developers of Discord did. And so did many others, though), so the users can have both the web and desktop versions of the app. 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+But first... let's get to work!
 
-## License
+## Thought process
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Frontend
+
+For the client side, I have been rethinking this project several times. 
+I first wanted to use only Laravel and blade. Then, I wanted to use VueJS and learned the framework. Now, I am willing to get back to using blade, but I am wondering whether I'll be using **LiveWire** or **splade**. 
+Once I'll have made my choice, I'll let you know here!
