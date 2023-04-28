@@ -16,35 +16,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/login', function () {
-    return view('login');
+    return view('auth.login');
 })->name('login');
 
 Route::get('/register', function () {
-    return view('register');
+    return view('auth.register');
 })->name('register');
 
-// Email verification routes
-Route::get('/email/verify', function () {
-    return view('auth.verify-email');
-})->middleware('auth')->name('verification.notice');
-
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
-
-    return redirect('/login');
-})->middleware(['auth', 'verified'])->name('verification.verify');
-
 // Logout route
-Route::post('/logout', function ($request) {
+Route::post('/logout', function () {
     Auth::logout();
-    $request->session()->invalidate();
-//    $request->session()->regenerateToken();
+    session()->invalidate();
+    session()->regenerateToken();
+    session()->destroy();
 
     return redirect()->intended('/login');
 })->name('logout');
 
-
-Route::post('/logout')->name('logout');
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/')->name('home');
     Route::get('/user')->name('user'); // Is kinda equal to a '/profile' route
